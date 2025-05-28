@@ -93,6 +93,8 @@ while True:
                     statusn[lnum] = "Complete"
                 elif len(donetasks[lnum]) >= len(taskgroup):
                     statusn[lnum] = "Almost Complete"
+                elif len(donetasks[lnum]) > 0:
+                    statusn[lnum] = "Inprogress"
                 else:
                     statusn[lnum] = "Incomplete"
                 print("Task Created!")
@@ -143,6 +145,8 @@ while True:
                     statusn[lnum] = "Complete"
                 elif len(donetasks[lnum]) >= len(taskgroup):
                     statusn[lnum] = "Almost Complete"
+                elif len(donetasks[lnum]) > 0:
+                    statusn[lnum] = "Inprogress"
                 else:
                     statusn[lnum] = "Incomplete"
                 print("\nDone!")
