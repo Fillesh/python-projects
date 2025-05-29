@@ -23,11 +23,13 @@ def CheckTasks(x, y):
             for group in groups:
                 if group:
                     task_list = group.split("\n")
-                    y.append(task_list)
+                    y.append(task_list) 
                 else:
-                    y.append([])
+                    for multiplier in range(0,(len(title))):
+                        y.append([])
         else:
-            y.append([])
+            for multiplier in range(0,(len(title))):
+                y.append([])
 
 def AddListElements(x,y):
     with open((x + ".txt"), "w") as adderr:
@@ -117,7 +119,7 @@ while True:
                         for tidx, task in enumerate(tasks[idx]):
                             print(f"    - {tidx+1}) {task}")
                     print("\nCompleted Task's: ")
-                    if donetasks == []:
+                    if(donetasks == [] or donetasks == [[]]):
                         print("    No completed task's yet.")
                     elif len(donetasks[idx]) == 0:
                         print("    No completed task's yet.")
