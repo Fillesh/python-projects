@@ -42,7 +42,7 @@ def AddTasks(x,y):
                 adderr.write("\n".join(adderr_list))
                 adderr.write("\n\n")
             else:
-                adderr.write("\n\n")
+                adderr.write(f"{[]}\n\n")
 
 def RemoveFile(x):
     if os.path.exists(x + ".txt"):
@@ -111,7 +111,7 @@ while True:
                     print(f"Description: {desc[idx]}")
                     print(f"Status : {statusn[idx]}")
                     print("Task's: ")
-                    if tasks == []:
+                    if(tasks == [] or tasks == [[]] or tasks == ['[]'] or tasks == '[]' or tasks[idx] == [] or tasks[idx] == [[]] or tasks[idx] == ['[]'] or tasks[idx] == '[]'):
                         print("    No task's yet.")
                     elif len(tasks[idx]) == 0:
                         print("    No task's yet.")
@@ -119,7 +119,7 @@ while True:
                         for tidx, task in enumerate(tasks[idx]):
                             print(f"    - {tidx+1}) {task}")
                     print("\nCompleted Task's: ")
-                    if(donetasks == [] or donetasks == [[]]):
+                    if(donetasks == [] or donetasks == [[]] or donetasks == ['[]'] or donetasks == '[]' or donetasks[idx] == [] or donetasks[idx] == [[]] or donetasks[idx] == ['[]'] or donetasks[idx] == '[]'):
                         print("    No completed task's yet.")
                     elif len(donetasks[idx]) == 0:
                         print("    No completed task's yet.")
