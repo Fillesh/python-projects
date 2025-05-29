@@ -119,6 +119,9 @@ while True:
                         for tidx, task in enumerate(tasks[idx]):
                             print(f"    - {tidx+1}) {task}")
                     print("\nCompleted Task's: ")
+                    for donetaskcl in donetasks:
+                        if '[]' in donetaskcl and len(donetaskcl) > 1:
+                            donetaskcl.remove('[]')
                     if(donetasks == [] or donetasks == [[]] or donetasks == ['[]'] or donetasks == '[]' or donetasks[idx] == [] or donetasks[idx] == [[]] or donetasks[idx] == ['[]'] or donetasks[idx] == '[]'):
                         print("    No completed task's yet.")
                     elif len(donetasks[idx]) == 0:
