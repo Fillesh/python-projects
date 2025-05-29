@@ -201,7 +201,7 @@ while True:
                     sfile.write(f"Description: {desc[idx]}\n")
                     sfile.write(f"Status: {statusn[idx]}\n")
                     sfile.write("Task's: \n")
-                    if tasks == []:
+                    if(tasks == [] or tasks == [[]] or tasks == ['[]'] or tasks == '[]' or tasks[idx] == [] or tasks[idx] == [[]] or tasks[idx] == ['[]'] or tasks[idx] == '[]'):
                         sfile.write("    No task's yet.")
                     elif len(tasks[idx]) == 0:
                         sfile.write("    No task's yet.")
@@ -209,7 +209,7 @@ while True:
                         for tidx, task in enumerate(tasks[idx]):
                             sfile.write(f"    - {tidx+1}) {task}\n")
                     sfile.write("Completed Task's: \n")
-                    if donetasks == []:
+                    if(donetasks == [] or donetasks == [[]] or donetasks == ['[]'] or donetasks == '[]' or donetasks[idx] == [] or donetasks[idx] == [[]] or donetasks[idx] == ['[]'] or donetasks[idx] == '[]'):
                         sfile.write("    No completed task's yet.")
                     elif len(donetasks[idx]) == 0:
                         sfile.write("    No completed task's yet.")
